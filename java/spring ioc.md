@@ -94,3 +94,27 @@ public void postProcessBeanFactory(ConfigurableListableBeanFactory );
 
 
 
+# Spring 源码
+
+
+
+AnnotationApplicationContext()
+
+
+
+beanFactory
+
+postprocessor
+
+configurationClassProcessor
+
+
+
+reader
+
+scanner
+
+AbstractApplication
+
+refresh()
+
