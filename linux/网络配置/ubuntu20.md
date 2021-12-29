@@ -10,7 +10,6 @@ ip address show
 ```
 
 # 查看所有网卡
-
 ## ip link
 ```
 ip link show
@@ -20,7 +19,7 @@ ip link show
 ls /sys/class/net
 ```
 
-## 启用和停用网卡
+# 启用和停用网卡
 ```
 ip link set eth0 up
 ```
