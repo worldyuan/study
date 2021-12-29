@@ -1,7 +1,12 @@
 # 配置网络
 ## 配置
 ```
-vim /etc/
+vim /etc/netplan/
+```
+
+## 查看
+```
+ip address show
 ```
 
 # 查看所有网卡
@@ -14,3 +19,5 @@ ip link show
 ```
 ls /sys/class/net
 ```
+
+## 启用和停用网卡
