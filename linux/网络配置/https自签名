@@ -10,8 +10,13 @@ export domain=abc.com
 
 # 生成RSA密钥
 ```
-openssl genrsa -des3 -out ${domain}.key 2048
-openssl genrsa -des3 -out ${domain}.key 1024
+openssl genrsa -des3 -out k${domain}.key 2048
+openssl genrsa -des3 -out k${domain}.key 1024
+```
+
+# 取消密码
+```
+openssl rsa -in k${domain}.key -out ${domain}.key
 ```
 
 # 生成一个证书请求
