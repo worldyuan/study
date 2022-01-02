@@ -14,8 +14,7 @@ type Wallet struct {
 
 func NewWallet() *Wallet {
 	privateKey, publicKey := newKeyPair()
-
-	return Wallet{
+	return &Wallet{
 		PrivateKey: privateKey,
 		PublicKey: publicKey,
 	}
@@ -23,5 +22,6 @@ func NewWallet() *Wallet {
 
 
 func newKeyPair() (ecdsa.PrivateKey, []byte) {
+	curve := 
 	return nil
 }
