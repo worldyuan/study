@@ -1,7 +1,6 @@
 package wallet
 
 import (
-	"crypto"
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
@@ -26,10 +25,10 @@ func NewWallet() *Wallet {
 
 func newKeyPair() (ecdsa.PrivateKey, []byte) {
 	curve := elliptic.P256()
-	te,err := ecdsa.GenerateKey(curve, rand.Reader)
+	private,err := ecdsa.GenerateKey(curve, rand.Reader)
 	if err != nil {
 		log.Panic(err)
 	}
-	pubKey := append(te.PublicKey.X.Bytes(), te.PublicKey.Y.Bytes()...)
-	return 
+	pubKey := append(private.PublicKey.X.Bytes(), private.PublicKey.Y.Bytes()...)
+	return *private, pubKey
 }
