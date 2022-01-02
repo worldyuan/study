@@ -23,7 +23,10 @@ type Wallet struct {
 }
 
 func (w *Wallet) Address() {
-	pubHash := PublicKeyHash()
+	pubHash := PublicKeyHash(w.PublicKey)
+
+	versionedHash := append([]byte{version}, pubHash...)
+	checksum := Checksum()
 }
 
 func NewWallet() *Wallet {
