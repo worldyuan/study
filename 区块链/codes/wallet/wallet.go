@@ -40,5 +40,5 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 }
 
 func PublicKeyHash(publickey []byte) []byte {
-	
+	hashedPublicKey := 
 }
