@@ -10,7 +10,10 @@ type Wallet struct {
 }
 
 func NewWallet() *Wallet {
+	privateKey, publicKey := newKeyPair()
+
 	return Wallet{
-		PrivateKey: 
+		PrivateKey: privateKey,
+		PublicKey: publicKey,
 	}
 }
