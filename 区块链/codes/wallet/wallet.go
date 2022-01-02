@@ -43,5 +43,5 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 func PublicKeyHash(publickey []byte) []byte {
 	hashedPublicKey := sha256.Sum256(publickey)
 
-	hasher := 
+	hasher := ripemd160
 }
