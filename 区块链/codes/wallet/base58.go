@@ -3,5 +3,10 @@ package wallet
 import "github.com/mr-tron/base58"
 
 func base58Encode(input []byte) []byte {
-	encode :=
+	encode := base58.Encode(input)
+	return []byte(encode)
+}
+
+func base58Decode(input []byte) []byte{
+	
 }
