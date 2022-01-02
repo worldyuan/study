@@ -17,3 +17,8 @@ func NewWallet() *Wallet {
 		PublicKey: publicKey,
 	}
 }
+
+
+func newKeyPair() () {
+
+}
