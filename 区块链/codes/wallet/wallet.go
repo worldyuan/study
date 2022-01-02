@@ -7,7 +7,11 @@ import (
 	"log"
 )
 
-const checksumLength = 
+const (
+	checksumLength = 4
+	version = byte(0x00)
+)
+
 
 type Wallet struct {
 	// 1、私钥
