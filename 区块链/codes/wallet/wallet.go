@@ -4,6 +4,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
+	"crypto/sha256"
 	"log"
 )
 
@@ -40,5 +41,7 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 }
 
 func PublicKeyHash(publickey []byte) []byte {
-	hashedPublicKey := 
+	hashedPublicKey := sha256.Sum256(publickey)
+
+	hasher := 
 }
