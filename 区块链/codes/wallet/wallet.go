@@ -1,6 +1,7 @@
 package wallet
 
 import (
+	"crypto"
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
@@ -43,5 +44,6 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 func PublicKeyHash(publickey []byte) []byte {
 	hashedPublicKey := sha256.Sum256(publickey)
 
-	hasher := ripemd160
+	hasher := crypto.RIPEMD160.New()
+	_, err := 
 }
