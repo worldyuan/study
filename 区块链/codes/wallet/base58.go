@@ -1,6 +1,9 @@
 package wallet
 
-import "github.com/mr-tron/base58"
+import (
+	"github.com/mr-tron/base58"
+	"log"
+)
 
 func base58Encode(input []byte) []byte {
 	encode := base58.Encode(input)
@@ -8,5 +11,9 @@ func base58Encode(input []byte) []byte {
 }
 
 func base58Decode(input []byte) []byte{
-	
+	decode, err := base58.Decode(string(input[:]))
+	if err != nil {
+		log.Panic(err)
+	}
+	return decode
 }
