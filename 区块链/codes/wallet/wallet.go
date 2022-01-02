@@ -39,4 +39,6 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 	return *private, pubKey
 }
 
-func PublicKeyHash()
+func PublicKeyHash(publickey []byte) []byte {
+	
+}
