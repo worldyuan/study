@@ -26,7 +26,10 @@ func (w *Wallet) Address() {
 	pubHash := PublicKeyHash(w.PublicKey)
 
 	versionedHash := append([]byte{version}, pubHash...)
-	checksum := Checksum()
+	checksum := Checksum(versionedHash)
+
+	finalHash := append(versionedHash, checksum...)
+	
 }
 
 func NewWallet() *Wallet {
