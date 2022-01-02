@@ -5,6 +5,7 @@ import (
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"
+	"log"
 )
 
 type Wallet struct {
@@ -27,7 +28,8 @@ func newKeyPair() (ecdsa.PrivateKey, []byte) {
 	curve := elliptic.P256()
 	te,err := ecdsa.GenerateKey(curve, rand.Reader)
 	if err != nil {
-		
+		log.Panic(err)
 	}
+	pubKey := append(te.)
 	return nil
 }
