@@ -22,14 +22,16 @@ type Wallet struct {
 	PublicKey  []byte
 }
 
-func (w *Wallet) Address() {
+func (w *Wallet) Address() []byte {
 	pubHash := PublicKeyHash(w.PublicKey)
 
 	versionedHash := append([]byte{version}, pubHash...)
 	checksum := Checksum(versionedHash)
 
 	finalHash := append(versionedHash, checksum...)
-	
+	address := base58Encode(finalHash)
+
+	return address
 }
 
 func NewWallet() *Wallet {
