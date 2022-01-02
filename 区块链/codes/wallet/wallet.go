@@ -7,6 +7,8 @@ import (
 	"log"
 )
 
+const checksumLength = 
+
 type Wallet struct {
 	// 1、私钥
 	PrivateKey ecdsa.PrivateKey
