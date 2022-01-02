@@ -54,6 +54,7 @@ func PublicKeyHash(publickey []byte) []byte {
 }
 
 func Checksum(ripeMdHash []byte) []byte{
-	fistHash := sha256.Sum256(ripeMdHash)
-	secondHash := 
+	firstHash := sha256.Sum256(ripeMdHash)
+	secondHash := sha256.Sum256(firstHash[:])
+	return secondHash[:checksumLength]
 }
