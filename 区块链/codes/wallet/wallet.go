@@ -45,5 +45,11 @@ func PublicKeyHash(publickey []byte) []byte {
 	hashedPublicKey := sha256.Sum256(publickey)
 
 	hasher := crypto.RIPEMD160.New()
-	_ := hasher.Sum(hashedPublicKey[:])
+	_, err := hasher.Write(hashedPublicKey[:])
+	if err != nil {
+		log.Panic(err)
+	}
+	publicRipeMd := hasher.Sum(nil)
+	return publicRipeMd
 }
+
