@@ -22,6 +22,10 @@ type Wallet struct {
 	PublicKey  []byte
 }
 
+func (w *Wallet) Address() {
+	pubHash := PublicKeyHash()
+}
+
 func NewWallet() *Wallet {
 	privateKey, publicKey := newKeyPair()
 	return &Wallet{
