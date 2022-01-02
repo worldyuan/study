@@ -3,6 +3,8 @@ package wallet
 import (
 	"crypto"
 	"crypto/ecdsa"
+	"crypto/elliptic"
+	"crypto/rand"
 )
 
 type Wallet struct {
@@ -22,6 +24,10 @@ func NewWallet() *Wallet {
 
 
 func newKeyPair() (ecdsa.PrivateKey, []byte) {
-	curve := 
+	curve := elliptic.P256()
+	te,err := ecdsa.GenerateKey(curve, rand.Reader)
+	if err != nil {
+		
+	}
 	return nil
 }
