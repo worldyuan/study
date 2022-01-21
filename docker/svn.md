@@ -3,8 +3,6 @@
 mkdir -p /opt/svn
 chmod -R 777 /opt/svn
 docker run --name svn -d --restart=always -v /opt/svn:/home/svn/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
-
-docker exec -t svn chmod -R 777 /home/svn
 ```
 
 # 查看svn配置
