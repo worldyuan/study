@@ -5,5 +5,6 @@ docker run --name svn -d --restart=always -v /opt/svn:/home/svn/ -p 7443:80 -p 3
 
 # 新建仓库
 ```
-docker exec -it svn svnadmin create FarmGame
+docker exec -it svn /bin/sh
+svnadmin create /home/svn/FarmGame
 ```
