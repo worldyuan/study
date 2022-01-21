@@ -1,9 +1,10 @@
 # 搭建svn
 ```
 docker run --name svn --privileged=true -d --restart=always -v /opt/svn/repo:/home/svn/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
-cd /opt/svn/
-mkdir conf
 docker cp svn:/etc/subversion /opt/svn/conf
+docker stop svn
+docker rm svn
+
 ```
 
 # 查看svn配置
