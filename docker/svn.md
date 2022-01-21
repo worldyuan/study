@@ -2,7 +2,7 @@
 ```
 mkdir -p /opt/svn
 chmod -R 777 /opt/svn
-docker run --name svn -d --restart=always -v /opt/svn:/home/svn/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
+docker run --name svn --privileged=true -d --restart=always -v /opt/svn:/home/svn/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
 ```
 
 # 查看svn配置
