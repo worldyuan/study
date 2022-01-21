@@ -1,7 +1,7 @@
 # 搭建svn
 ```
 docker run --name svn -d --restart=always -v /opt/svn:/home/svn/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
-docker run -t svn chmod a+w /home/svn
+docker exec -t svn chmod a+w /home/svn
 ```
 
 # 查看svn配置
