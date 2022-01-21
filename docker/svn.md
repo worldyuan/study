@@ -5,6 +5,7 @@ docker cp svn:/etc/subversion /opt/svn/conf
 docker stop svn
 docker rm svn
 docker run --name svn --privileged=true -d --restart=always -v /opt/svn/repo:/home/svn/ -v /opt/svn/conf:/etc/subversion/ -p 7443:80 -p 3690:3690 elleflorio/svn-server
+chmod -R a+w /opt/svn
 ```
 
 # 查看svn配置
@@ -36,3 +37,6 @@ docker exec -it svn svnadmin create /home/svn/FarmGame
 docker exec -t svn htpasswd -b /etc/subversion/passwd Steve Steve@123
 ```
 也可以访问： http://121.43.62.214:7443/svnadmin
+
+# 参考
+https://my.oschina.net/jack088/blog/4294855
