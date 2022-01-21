@@ -24,9 +24,11 @@ LoadModule authz_svn_module /usr/lib/apache2/mod_authz_svn.so
 
 # 新建仓库
 ```
-docker exec -it svn /bin/sh
-svnadmin create /home/svn/FarmGame
-docker exec -t svn htpasswd -b /etc/subversion/passwd Steve Steve@123
+docker exec -it svn svnadmin create /home/svn/FarmGame
 ```
 
-# 账号
+# 账号管理
+```
+docker exec -t svn htpasswd -b /etc/subversion/passwd Steve Steve@123
+```
+也可以访问： http://121.43.62.214:7443/svnadmin
