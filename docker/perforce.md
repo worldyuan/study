@@ -62,3 +62,7 @@ RUN apt-get install -y helix-p4d
 CMD chown -R perforce:perforce /perforce-data && cd /dbs && p4dctl start master && tail -F /perforce-data/logs/log
 ```
 
+# 拉取配置文件
+```
+docker-compose run -T --rm perforce tar czf - -C /etc/perforce/p4dctl.conf.d  . | tar xvzf - -C p4dctl.conf.d/
+```
