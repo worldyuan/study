@@ -27,3 +27,9 @@ services:
 		ports:
 			- 1666:1666
 ```
+# 新建perforce配置文件
+```
+mkdir p4dctl.conf.d
+mkdir perforce-data
+mkdir dbs
+```
