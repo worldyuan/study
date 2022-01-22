@@ -66,3 +66,5 @@ CMD chown -R perforce:perforce /perforce-data && cd /dbs && p4dctl start master 
 ```
 docker-compose run -T --rm perforce tar czf - -C /etc/perforce/p4dctl.conf.d  . | tar xvzf - -C p4dctl.conf.d/
 ```
+
+# 打开docker-compose中volumes的注释
