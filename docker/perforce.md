@@ -68,3 +68,8 @@ docker-compose run -T --rm perforce tar czf - -C /etc/perforce/p4dctl.conf.d  . 
 ```
 
 # 打开docker-compose中volumes的注释
+
+# 配置服务器
+```
+docker-compose run --rm perforce /opt/perforce/sbin/configure-helix-p4d.sh
+```
