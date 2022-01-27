@@ -11,7 +11,10 @@ docker run --rm -ti --network nebula-docker-compose_nebula-net --entrypoint=/bin
 nebula-console -u root -p Nebula@123 --address=graphd --port=9669
 ```
 
-# 查看运行
+# 查看运行状态
+```
+show hosts
+```
 
 # 下载和安装nebula studio
 ```
