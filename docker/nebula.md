@@ -8,7 +8,7 @@ cd nebula-docker-compose/
 
 # 设置密码
 ```
-docker run --rm -ti --network nebula-docker-compose_nebula-net --entrypoint=/bin/sh vesoft/nebula-console:v2.6.0
+docker run --rm -ti --network nebula-docker-compose_nebula-net --entrypoint=/bin/sh vesoft/nebula-console
 nebula-console -u root -p Nebula@123 --address=graphd --port=9669
 ```
 
