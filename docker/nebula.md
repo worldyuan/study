@@ -18,6 +18,6 @@ show hosts
 
 # 下载和安装nebula studio
 ```
-git clone https://github.com/vesoft-inc/nebula-studio.git
+git clone --bran https://github.com/vesoft-inc/nebula-studio.git
 
 ```
