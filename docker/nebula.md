@@ -18,5 +18,7 @@ show hosts
 
 # 下载和安装nebula studio
 ```
-curl https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-studio-v3.1.0.tar.gz
+curl -O https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-studio-v3.1.0.tar.gz
+
+
 ```
