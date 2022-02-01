@@ -1,7 +1,7 @@
 # 下载和安装nebula
 https://docs.nebula-graph.com.cn/2.6.2/4.deployment-and-installation/2.compile-and-install-nebula-graph/3.deploy-nebula-graph-with-docker-compose/
 ```
-git clone --branch v2.6 --single-branch --depth=1 https://github.com/vesoft-inc/nebula-docker-compose.git
+git clone -b v2.6 --single-branch --depth=1 https://github.com/vesoft-inc/nebula-docker-compose.git
 cd nebula-docker-compose/
 
 ```
