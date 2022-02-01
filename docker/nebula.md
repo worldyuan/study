@@ -18,6 +18,5 @@ show hosts
 
 # 下载和安装nebula studio
 ```
-git clone --branch v2.0.0 --single-branch --depth=1 https://github.com/vesoft-inc/nebula-graph-studio.git
-
+curl https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-studio-v3.1.0.tar.gz
 ```
