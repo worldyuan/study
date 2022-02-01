@@ -1,6 +1,6 @@
 # 下载和安装nebula
 ```
-git clone https://github.com/vesoft-inc/nebula-docker-compose.git
+git clone --branch v2.0.0 --single-branch --depth=1 https://github.com/vesoft-inc/nebula-docker-compose.git
 cd nebula-docker-compose/
 
 ```
@@ -18,6 +18,6 @@ show hosts
 
 # 下载和安装nebula studio
 ```
-git clone --bran https://github.com/vesoft-inc/nebula-studio.git
+git clone --branch v2.0.0 --single-branch --depth=1 https://github.com/vesoft-inc/nebula-graph-studio.git
 
 ```
