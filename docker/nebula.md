@@ -20,7 +20,7 @@ show hosts
 # 下载和安装nebula studio
 ```
 curl -O https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-studio-v3.1.0.tar.gz
-tar -xvf ./nebula-graph-studio-v3.1.0.tar.gz -C ./nebula-graph-studio
+tar -xvf -C ./nebula-graph-studio ./nebula-graph-studio-v3.1.0.tar.gz
 cd ./nebula-graph-studio
 docker-compose up -d
 ```
