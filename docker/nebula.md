@@ -24,5 +24,50 @@ mkdir nebula-graph-studio
 tar -xvf ./nebula-graph-studio-v3.1.0.tar.gz -C ./nebula-graph-studio 
 cd ./nebula-graph-studio
 ```
+## 给
+修改docker-compose.yml配置文件
+```
+version: '3.4'
+services:
+  client:
+    image: vesoft/nebula-http-gateway:v2.1.1
+    environment:
+      USER: root
+    ports:
+      - 8080
+    volumes:
+      - ${UPLOAD_DIR}:${MAPPING_DOCKER_DIR}:rw
+    networks:
+      - nebula-web
+      - nebula-docker-compose_nebula-net
+  web:
+    image: vesoft/nebula-graph-studio:v3.1.0
+    environment:
+      USER: root
+      UPLOAD_DIR: ${MAPPING_DOCKER_DIR}
+    ports:
+      - 7001
+    depends_on:
+      - client
+    volumes:
+      - ${UPLOAD_DIR}:${MAPPING_DOCKER_DIR}:rw
+    networks:
+      - nebula-web
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/nebula.conf
+      - ${UPLOAD_DIR}:${MAPPING_DOCKER_DIR}:rw
+    depends_on:
+      - client
+      - web
+    networks:
+      - nebula-web
+    ports:
+      - 8001:7001
 
+networks:
+  nebula-web:
+  nebula-docker-compose_nebula-net:
+    external: true
 ```
