@@ -24,8 +24,8 @@ mkdir nebula-graph-studio
 tar -xvf ./nebula-graph-studio-v3.1.0.tar.gz -C ./nebula-graph-studio 
 cd ./nebula-graph-studio
 ```
-## 给
-修改docker-compose.yml配置文件
+## 打通studio和nebula
+修改docker-compose.yml配置文件，给studio的client增加nebula-docker-compose_nebula-net这个网络
 ```
 version: '3.4'
 services:
