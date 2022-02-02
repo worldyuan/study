@@ -17,7 +17,8 @@ nebula-console -u root -p Nebula@123 --address=graphd --port=9669
 show hosts
 ```
 
-# 下载和安装nebula studio
+# studio
+## 下载和安装nebula studio
 ```
 curl -O https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-studio-v3.1.0.tar.gz
 mkdir nebula-graph-studio
@@ -71,4 +72,7 @@ networks:
   nebula-docker-compose_nebula-net:
     external: true
 ```
-## 
+## 连接host
+- HOST:graphd:9669
+- 用户名：root
+- 
