@@ -23,5 +23,6 @@ curl -O https://oss-cdn.nebula-graph.com.cn/nebula-graph-studio/nebula-graph-stu
 mkdir nebula-graph-studio
 tar -xvf ./nebula-graph-studio-v3.1.0.tar.gz -C ./nebula-graph-studio 
 cd ./nebula-graph-studio
-docker-compose up -d
+```
+
 ```
