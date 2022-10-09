@@ -5,6 +5,10 @@ docker run -dt --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root  -e MYSQL_D
 
 ```
 
+## 导出数据库
+```shell
+sudo docker run -it --rm --link mysql mysql mysqldump -h mysql -uroot -p"root" --databases ruoyi-vue-pro >/tmp/test.sql
+```
 
 
 
