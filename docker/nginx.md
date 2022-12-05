@@ -11,6 +11,7 @@ docker run -dt --name nginx -p 80:80 -p 443:443 -v $(pwd)/log:/var/log/nginx -v 
 
 
 ## https
+### DNS
 docker-compose.yml
 ```yaml
 version: '3'
@@ -84,4 +85,42 @@ server {
 申请证书
 ```shell
 docker compose run --rm  certbot certonly --manual --preferred-challenges=dns --webroot-path /var/www/certbot/ -d ziwo.me -d *.ziwo.me
+ docker compose run --rm  certbot certonly --manual --preferred-challenges=dns -d ziwo.me -d *.ziwo.me
+```
+### godaddy
+github: https://github.com/miigotu/certbot-dns-godaddy
+
+/var/lib/letsencrypt/godaddy_credentials.ini
+```
+dns_godaddy_secret = 0123456789abcdef0123456789abcdef01234567
+dns_godaddy_key = abcdef0123456789abcdef01234567abcdef0123
+```
+
+运行命令
+```shell
+docker run --rm \
+  -v /var/lib/letsencrypt:/var/lib/letsencrypt \
+  -v $(pwd)/conf/ssl:/etc/letsencrypt \
+  --cap-drop=all \
+  miigotu/certbot-dns-godaddy certbot certonly \
+    --authenticator dns-godaddy \
+    --dns-godaddy-propagation-seconds 900 \
+    --dns-godaddy-credentials /var/lib/letsencrypt/godaddy_credentials.ini \
+    --keep-until-expiring --non-interactive --expand \
+    --server https://acme-v02.api.letsencrypt.org/directory \
+    --agree-tos --email "webmaster@example.com" \
+    -d example.com -d '*.example.com'
+```
+
+### cloudflare
+```shell
+sudo docker run -it --rm --name certbot -v "$(pwd)/conf/ssl:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" certbot/certbot certonly
+sudo docker run -it --rm -v "$(pwd)/conf/ssl:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" -v "$(pwd):/opt/cloudflare" certbot/dns-cloudflare certonly --key-type rsa --dns-cloudflare --dns-cloudflare-credentials /opt/cloudflare/credentials -m test@123.com --agree-tos --no-eff-email --dns-cloudflare-propagation-seconds 20 --cert-name ziwo.com -d "ziwo.com" -d "*.ziwo.com"
+```
+
+### aliyun
+```shell
+git clone https://gitee.com/keijack/certbot-dns-aliyun-docker.git
+cd certbot-dns-aliyun-docker
+docker run -it --rm -e "ALIYUN_AK=LTAI5tNFcbvTHsWetWK5aKEr" -e "ALIYUN_SK=p5ZzTc6OTROKtTDjZ6vQggF5y558Wz" -e "EMAIL=hhkoffg0@163.com" -v "$(pwd)/conf/ssl:/etc/letsencrypt" -v "/var/lib/letsencrypt:/var/lib/letsencrypt" certbot/aliyun obtain_cert -d "ziwo.icu" -d "*.ziwo.icu" -d "ziwo.me" -d "*.ziwo.me" -d "ziwo.com" -d "*.ziwo.com"
 ```
