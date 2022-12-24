@@ -1,3 +1,8 @@
+## git 基础命令
+#### 配置git的默认编辑器
+```shell
+git config --global core.editor vim
+```
 #### 安装glf
 ```shell
 git lfs install
