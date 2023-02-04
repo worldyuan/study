@@ -3,6 +3,13 @@
 ```shell
 git config --global core.editor vim
 ```
+
+## 将默认https替换为git
+```shell
+git config --global url."git@git.mygitlab.com:".insteadOf https://git.mygitlab.com
+```
+
+
 #### 安装glf
 ```shell
 git lfs install
