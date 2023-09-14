@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #API_KEY=lxwiC1qHZtJHUNzqXuA7PIznGO-USwTECaweHYqp
-MAIL=Clould.first@gmail.com
+MAIL=120yp@163.com.com
 API_KEY=c7a13d0579e511a98e5f0b267235ed92e1a01
 
 proxied=false
