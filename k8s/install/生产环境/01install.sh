@@ -4,7 +4,7 @@ cat >> /etc/hosts << EOF
 172.23.80.68   k8s-node2
 EOF
 
-hostnamectl set-hostname k8s-master
+hostnamectl set-hostname k8s-node1
 
 sudo setenforce 0
 sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config

@@ -6,3 +6,4 @@ chmod 700 get_helm.sh
 
 helm repo add cilium https://helm.cilium.io/
 helm install cilium cilium/cilium --namespace=kube-system
+
