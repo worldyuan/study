@@ -120,8 +120,7 @@ style hchan fill:#f9f,stroke:#333,stroke-width:4px`
 style waitq fill:#f9f,stroke:#333,stroke-width:4px`
 ```
 - 数据结构如下图所示
-@import "assets/chan/hchan数据结构.svg"
-
+<img src="assets/chan/hchan数据结构.svg" alt="alt text">
 
 ### runtime.makechan
 文件在`src/runtime/chan.go`中，代码片段如下。
