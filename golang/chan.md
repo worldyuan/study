@@ -4,19 +4,19 @@
 <!-- code_chunk_output -->
 
 - [运行时源码解析](#运行时源码解析)
-  - [底层分析](#底层分析)
-  - [数据结构](#数据结构)
-  - [runtime.makechan](#runtimemakechan)
-    - [流程图](#流程图)
-  - [runtime.chansend](#runtimechansend)
-    - [源码](#源码)
-    - [流程图](#流程图-1)
-  - [runtime.chanrecv](#runtimechanrecv)
-    - [源码](#源码-1)
-    - [流程图](#流程图-2)
-  - [runtime.closechan](#runtimeclosechan)
-    - [源码](#源码-2)
-    - [流程图](#流程图-3)
+	- [底层分析](#底层分析)
+	- [数据结构](#数据结构)
+	- [runtime.makechan](#runtimemakechan)
+		- [流程图](#流程图)
+	- [runtime.chansend](#runtimechansend)
+		- [源码](#源码)
+		- [流程图](#流程图-1)
+	- [runtime.chanrecv](#runtimechanrecv)
+		- [源码](#源码-1)
+		- [流程图](#流程图-2)
+	- [runtime.closechan](#runtimeclosechan)
+		- [源码](#源码-2)
+		- [流程图](#流程图-3)
 
 <!-- /code_chunk_output -->
 
@@ -25,7 +25,7 @@
 ### 底层分析
 我们写一个简单的channel代码，查看汇编(go语言自己的中间语言)代码，go代码如下
 @import "demo/chan/make.go"
-我们再使用`go tool compile -S -N -l ./demo/chan/make.go > ./demo/chan/make.s`,make.s的go汇编中间码如下
+我们再使用`go tool compile -S -N -l -m ./demo/chan/make.go > ./demo/chan/make.s`,make.s的go汇编中间码如下
 @import "demo/chan/make.s"
 
 在go汇编中，很轻易的可以看到，分别调用了`runtime.makechan`，`runtime.chansend1`，`runtime.chanrecv1`。
@@ -120,7 +120,7 @@ style hchan fill:#f9f,stroke:#333,stroke-width:4px`
 style waitq fill:#f9f,stroke:#333,stroke-width:4px`
 ```
 - 数据结构如下图所示
-<img src="assets/chan/hchan数据结构.svg" alt="alt text">
+<img src="assets/chan/hchan数据结构.svg" alt="hchan数据结构">
 
 ### runtime.makechan
 文件在`src/runtime/chan.go`中，代码片段如下。
