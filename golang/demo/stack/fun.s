@@ -28,7 +28,7 @@ main.add2 STEXT nosplit size=428 args=0x90 locals=0x50 funcid=0x0 align=0x0
 	0x0008 00008 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	AX, main.a1+160(SP)
 	0x0010 00016 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	BX, main.a2+168(SP)
 	0x0018 00024 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	CX, main.a3+176(SP)
-	0x0020 00032 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	DI, main.a4+184(SP)
+	0x0020 00032 (D:/code/study/golang/demo/stack/fun.go:8)	MOVQ	DI, main.a4+184(SP)
 	0x0028 00040 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	SI, main.a5+192(SP)
 	0x0030 00048 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	R8, main.a6+200(SP)
 	0x0038 00056 (D:/code/study/golang/demo/stack/fun.go:7)	MOVQ	R9, main.a7+208(SP)

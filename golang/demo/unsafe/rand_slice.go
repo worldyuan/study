@@ -27,15 +27,20 @@ func add(p unsafe.Pointer, x uintptr) unsafe.Pointer {
 	return unsafe.Pointer(uintptr(p) + x)
 }
 
+type aa interface {
+}
+
 func main() {
 	a := testData{a: 1, b: "a"}
 	b := testData{a: 1, b: "b"}
 	arr := []testData{a, b}
 
+	m := map[string]aa{}
+	m["a"] = 1
+
 	fmt.Printf("sizeof(a)=%v\n", unsafe.Sizeof(a))
 	fmt.Printf("sizeof(arr)=%v\n", unsafe.Sizeof(arr))
 	fmt.Printf("%v", arr)
-	return
 	swap(unsafe.Pointer(&arr), unsafe.Sizeof(a), 0, 1)
 	fmt.Printf("%v", arr)
 }
