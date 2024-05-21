@@ -168,11 +168,11 @@ $$\color{red}{\Delta y_i=\frac{1}{x_i} \Delta x}$$
 $$s \approx \sum_{i=1}^n\Delta y_i=\sum_{i=1}^n\frac{1}{x_i}\Delta x_i$$
 
 - 实例说明
-基于论证2:$\Delta y_i$是一个恒定的值，因为我们是进行平分的。在比尔吉的论证(论证2)中，那么$\Delta y = 10^{-4}$，第i个y的值是 $y_i=10^{-4}i$
-基于论证2:$\Delta y = \frac{1}{n}$
+基于论证2: $\Delta y_i$ 是一个恒定的值，因为我们是进行平分的。在比尔吉的论证(论证2)中，那么 $\Delta y = 10^{-4}$ ，第i个y的值是 $y_i=10^{-4}i$
+基于论证2: $\Delta y = \frac{1}{n}$ 
 
 #### s(y值)的几何意义
-我们发现$\frac{1}{x_i}\Delta x_i$，就是第i个根据y等分的x线段，高为$\frac{1}{x}$外接矩形的面积。那么上面s的值其实就是函数$f(x)=\frac{1}{x}$外接矩形的面积（将这个分成了n个矩形）。面积是
+我们发现 $\frac{1}{x_i}\Delta x_i$， 就是第i个根据y等分的x线段，高为 $\frac{1}{x}$外接矩形的面积。那么上面s的值其实就是函数 $f(x)=\frac{1}{x}$外接矩形的面积（将这个分成了n个矩形）。面积是
 $$\color{blue}{\sum_{i=1}^n\frac{1}{x_i}\Delta x}$$，当n越趋近于无穷大时，他们的面积就越相近。
 最开始的 $x = b ^ y$，现在就变成了
 $$\color{blue}{t=\lim_{n\to\infty}(1 + \frac{1}{n})^{ns}}$$
