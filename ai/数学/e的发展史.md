@@ -97,17 +97,17 @@ b为底数的关系
 
 
 我们继续往下推导，那么$\Delta y = (y+1)-y$ = `1`
-那么$$\frac{\Delta y}{\Delta x} $$
+那么$$\frac{\Delta y}{\Delta x}$$
 $$=\frac{1}{b^y \times (b -1)}$$
 将b = $(1 + 10 ^ {-4})$代入
 $$=\frac{1}{(1 + 10 ^ {-4})^y \times (1 + 10 ^ {-4} -1)}$$
 $$=\frac{1}{(1 + 10 ^ {-4})^y \times 10 ^ {-4}}$$
-$$=\frac{10^4}{x}  $$
+$$=\frac{10^4}{x}$$
 那么
-$$\frac{\Delta y}{\Delta x} =\frac{10^4}{x}  $$
-$$\frac{10 ^{-4} \times \Delta y}{\Delta x} =\frac{1}{x}  $$
+$$\frac{\Delta y}{\Delta x} =\frac{10^4}{x}$$
+$$\frac{10 ^{-4} \times \Delta y}{\Delta x} =\frac{1}{x}$$
 现在这个式子变成了
-$$\color{blue}{\frac{10 ^{-4} \times \Delta y}{\Delta x} =\frac{1}{x}} $$
+$$\color{blue}{\frac{10 ^{-4} \times \Delta y}{\Delta x} =\frac{1}{x}}$$
 #### 简化公式，将y的步长变为$10^{-4}$(论证2)
 现在的$\Delta y$固定是1，那如果我让$\Delta y$变为原来的 $10 ^ {-4}$倍，那么公式发生了一点改变
 x = $(1 + 10 ^ {-4})^{10^4 y}$，在这里需要注意， $10^4 y$的步长还是1，所以根前面的式子是一样的，在这种情况下
@@ -125,45 +125,45 @@ $$=\frac{\Delta y}{(1 + 10 ^{-4}) ^ {10 ^ 4 y} \times 10 ^{-4}}$$
 $$=\frac{\Delta y}{x \times 10 ^{-4}}$$
 $$=\frac{10 ^ 4\Delta y}{x}$$
 前面可以直到 ${10 ^ 4}\Delta y$ = `1`，那么
-$$\color{blue}{\frac{\Delta y}{\Delta x} = \frac{1}{x}} $$
-$$\color{blue}{\frac{\Delta x}{\Delta y} = x} $$
-$$\color{blue}{\Delta x = x\Delta y} $$
+$$\color{blue}{\frac{\Delta y}{\Delta x} = \frac{1}{x}}$$
+$$\color{blue}{\frac{\Delta x}{\Delta y} = x}$$
+$$\color{blue}{\Delta x = x\Delta y}$$
 当然，这里 $10^{-4}$可以是一个无穷小的数字，在这里我们可以认为主要研究的是等差数列和等比数列之间的关系。在这里我们可以理解为对y进行等比分割，x轴的变化规律。
 $$\Delta y = \frac{1}{x}\Delta x = 10 ^ {-4}$$，更通俗的理解为，对y轴进行等比分割，x轴的当前步长是 $\Delta x = x \Delta y$
 
 #### 提高精度，将y为1的步长分成n份，b底数设置为 $1+\frac{1}{n}$(论证3)
-$$\color{blue}{b = 1 + \frac{1}{n}} $$
+$$\color{blue}{b = 1 + \frac{1}{n}}$$
 原式子： $x = b^y$
 => $x=b^{ny}$
 
-$\Delta y = \frac{1}{n} $
-$$\color{blue}{\Delta y = \frac{1}{n}}   $$
+$\Delta y = \frac{1}{n}$
+$$\color{blue}{\Delta y = \frac{1}{n}}$$
 $\Delta x = b^{n(y+\frac{1}{n})} - b^{ny}$
 => $\Delta x = b^{n(y+\frac{1}{n})} - b^{ny}$
 => $\Delta x = b^{ny+1} - b^{ny}$
 => $\Delta x = b^{ny} \times b - b^{ny}$
 => $\Delta x = b^{ny} \times (b - 1)$
-$$\color{blue}{\Delta x = b^{ny} \times (b - 1)} $$
+$$\color{blue}{\Delta x = b^{ny} \times (b - 1)}$$
 
-$$\frac{\Delta y}{\Delta x} $$
-$$=\frac{\frac{1}{n}}{b^{ny} \times (b - 1)} $$
+$$\frac{\Delta y}{\Delta x}$$
+$$=\frac{\frac{1}{n}}{b^{ny} \times (b - 1)}$$
 将b的值代入
-$$\frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (1 + \frac{1}{n} - 1)} $$
-$$= \frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (1 + \frac{1}{n} - 1)} $$
-$$= \frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (\frac{1}{n})} $$
-$$= \frac{1}{(1+\frac{1}{n})^{ny}} $$
-$$= \frac{1}{x} $$
+$$\frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (1 + \frac{1}{n} - 1)}$$
+$$= \frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (1 + \frac{1}{n} - 1)}$$
+$$= \frac{\frac{1}{n}}{(1+\frac{1}{n})^{ny} \times (\frac{1}{n})}$$
+$$= \frac{1}{(1+\frac{1}{n})^{ny}}$$
+$$= \frac{1}{x}$$
 所以最终的式子为
-$$\color{red}{\frac{\Delta y}{\Delta x} = \frac{1}{x}}  $$
-$$\color{red}{\frac{\Delta x}{\Delta y} = x}  $$
-$$\color{red}{\Delta x = x\Delta y}  $$
+$$\color{red}{\frac{\Delta y}{\Delta x} = \frac{1}{x}}$$
+$$\color{red}{\frac{\Delta x}{\Delta y} = x}$$
+$$\color{red}{\Delta x = x\Delta y}$$
 
 ### 无限
 #### 无限思想
 前面已经将y的步长分成了n份，如果n无限大的时候，$\Delta y = \frac{1}{n}$就会无限趋近于0,$\Delta x = x\Delta y$也会无限趋近于0。
 根据函数的成象中，我们对y进行等距分割，那么$\Delta y = \frac{1}{x}\Delta x$，第i个y的值记作：
 那么第i个y的变化大小
-$$\color{red}{\Delta y_i=\frac{1}{x_i} \Delta x} $$
+$$\color{red}{\Delta y_i=\frac{1}{x_i} \Delta x}$$
 在函数上，任意一点（t,s），那么
 $$s \approx \sum_{i=1}^n\Delta y_i=\sum_{i=1}^n\frac{1}{x_i}\Delta x_i$$
 
@@ -173,16 +173,16 @@ $$s \approx \sum_{i=1}^n\Delta y_i=\sum_{i=1}^n\frac{1}{x_i}\Delta x_i$$
 
 #### s(y值)的几何意义
 我们发现$\frac{1}{x_i}\Delta x_i$，就是第i个根据y等分的x线段，高为$\frac{1}{x}$外接矩形的面积。那么上面s的值其实就是函数$f(x)=\frac{1}{x}$外接矩形的面积（将这个分成了n个矩形）。面积是
-$$\color{blue}{\sum_{i=1}^n\frac{1}{x_i}\Delta x} $$，当n越趋近于无穷大时，他们的面积就越相近。
+$$\color{blue}{\sum_{i=1}^n\frac{1}{x_i}\Delta x}$$，当n越趋近于无穷大时，他们的面积就越相近。
 最开始的 $x = b ^ y$，现在就变成了
-$$\color{blue}{t=\lim_{n\to\infty}(1 + \frac{1}{n})^{ns}} $$
+$$\color{blue}{t=\lim_{n\to\infty}(1 + \frac{1}{n})^{ns}}$$
 其中 s和t，是前面等差数列和等比数列中的纵坐标(s)和横坐标(t)
 
 #### 得出结论
 我们刚才看到
 $$\color{red}{t = \lim_{n\to\infty}(1+\frac{1}{n})^{ns}}$$
 令 
-$$\color{red}{e=\lim_{n\to\infty}(1+\frac{1}{n})^n} $$
+$$\color{red}{e=\lim_{n\to\infty}(1+\frac{1}{n})^n}$$
 那么
 $$\color{red}{t = e^s}$$
 
