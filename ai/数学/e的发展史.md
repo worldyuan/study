@@ -91,7 +91,7 @@ b为底数的关系
 |y|1|2|3|4|5|6|7|8|9|10|11|$\cdots$|
 
 那么
-$ \Delta y = 1 $
+$\Delta y = 1$
 ,
 $\Delta x = b ^ {y + 1} - b ^ y$
 => $\Delta x = b^y \times (b -1)$
