@@ -160,7 +160,7 @@ $$\color{red}{\Delta x = x\Delta y}$$
 
 ### 无限
 #### 无限思想
-前面已经将y的步长分成了n份，如果n无限大的时候，$\Delta y = \frac{1}{n}$就会无限趋近于0,$\Delta x = x\Delta y$也会无限趋近于0。
+前面已经将y的步长分成了n份，如果n无限大的时候，$\Delta y = \frac{1}{n}$ 就会无限趋近于0,$\Delta x = x\Delta y$也会无限趋近于0。
 根据函数的成象中，我们对y进行等距分割，那么$\Delta y = \frac{1}{x}\Delta x$，第i个y的值记作：
 那么第i个y的变化大小
 $$\color{red}{\Delta y_i=\frac{1}{x_i} \Delta x}$$
